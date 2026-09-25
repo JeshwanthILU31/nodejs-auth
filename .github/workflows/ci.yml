@@ -24,6 +24,6 @@ jobs:
           run: npm test
 
         - name: Test Secret
-          run: echo "Secret exists: $TEST_SECRET"
+          run: 'echo "Secret exists: $TEST_SECRET"'
           env:
              TEST_SECRET: ${{ secrets.TEST_SECRET }}
