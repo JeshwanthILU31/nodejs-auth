@@ -44,6 +44,15 @@ jobs:
       steps:
         - name: Deploy Check
           run : echo "Test passed, deployment can proceed"
+
+        - name: Create artifact
+          run: echo "CI pipeline completed successfully" >  result.txt
+
+        - name: Upload artifact
+          uses: actions/upload-artifact@v4
+          with: 
+            name: ci-result
+            path: result.txt
           
   code-quality: 
       runs-on: ubuntu-latest
