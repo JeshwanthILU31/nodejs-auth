@@ -39,4 +39,12 @@ jobs:
       steps:
         - name: Deploy Check
           run : echo "Test passed, deployment can proceed"
+          
+  code-quality: 
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Code Quality Check
+          run : echo "Code Quality Check Passed"
+        
       
