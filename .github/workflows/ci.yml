@@ -33,7 +33,9 @@ jobs:
           run: echo "Environment is $APP_ENV"
           
   deploy-check: 
-      needs: test
+      needs: 
+         - test
+         - code-quality
       runs-on: ubuntu-latest
 
       steps:
