@@ -36,6 +36,9 @@ jobs:
       needs: 
          - test
          - code-quality
+
+      if: ${{ github.ref == 'ref/heads/main' }}   
+      
       runs-on: ubuntu-latest
 
       steps:
