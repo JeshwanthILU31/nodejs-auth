@@ -4,6 +4,8 @@ on:
   push:
     branches:
        - main
+env:
+   APP_ENV: test
 jobs:
   test:
      runs-on: ubuntu-latest
@@ -27,3 +29,5 @@ jobs:
           run: 'echo "Secret exists: $TEST_SECRET"'
           env:
              TEST_SECRET: ${{ secrets.TEST_SECRET }}
+        - name: Check environment
+          run: echo "Environment is $APP_ENV"
