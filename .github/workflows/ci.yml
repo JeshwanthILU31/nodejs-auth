@@ -31,3 +31,12 @@ jobs:
              TEST_SECRET: ${{ secrets.TEST_SECRET }}
         - name: Check environment
           run: echo "Environment is $APP_ENV"
+          
+  deploy-check: 
+      needs: test
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Deploy Check
+          run : echo "Test passed, deployment can proceed"
+      
