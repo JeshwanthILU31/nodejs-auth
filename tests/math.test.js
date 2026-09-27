@@ -2,7 +2,7 @@ function add(a, b) {
   return a + b;
 }
 
-const result = add(3, 3);
+const result = add(2, 3);
 
 if (result !== 5) {
   throw new Error("Addition test failed");
